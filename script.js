@@ -31,8 +31,9 @@ App.service('HelperService', [function HelperService() {
         // ... snip, testing if argument is string, or array ... for the ease lets say its a single script: string
         $.when(
             $.getScript(scriptFile)
-        ).done(callback);
-
+        ).done(function cb() {
+                callback();
+        });
     };
 
     return {
@@ -52,11 +53,14 @@ App.controller('framework.appController', ['$scope', '$routeParams', 'HelperServ
         var appServiceUrl = '/apps/' + $scope.app.name + '/' + $scope.app.name + '.js';
 
         HelperService.includeJavaScript(appServiceUrl, function callback() {
+            angular.bootstrap($('#application-container'), [$scope.app.name]);
             appPreloaded();
         });
     };
 
     var appPreloaded = function appPreloaded() {
+
+        console.warn('loaded!', arguments);
         // application preloaded, scripts are included, fire it up...
         $scope.app.appTemplate = '/apps/' + $scope.app.name + '/views/app.html';
     };
