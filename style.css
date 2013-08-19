@@ -1,0 +1,24 @@
+body, h1, h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    height: 100px;
+    background: #CCC;
+    padding: 10px;
+}
+
+#sidebar {
+    background: #CCC;
+    width: 200px;
+    float: left;
+    padding: 10px;
+    height: 600px;
+}
+
+#content {
+    background: white;
+    float: left;
+    padding: 10px;
+}
