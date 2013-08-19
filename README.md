@@ -9,6 +9,12 @@ later users should be able to 'install' an app (binding it to their user profile
 
 when the user clicks the app in the sidebar it should load the dependencies and boot up the app.
 
+## input
+
+you can give input on this on:
+* stack overflow (http://stackoverflow.com/questions/18184617/angularjs-how-to-nest-applications-within-an-angular-app)
+* google groups (https://groups.google.com/forum/#!topic/angular/5niS0ApAKvE)
+
 ## challenges
 
 * however, at the moment i'm stuck at the booting of the app. scripts are loaded but have no relation to the framework,
